@@ -11,10 +11,17 @@ RNAs are nucleotide polymers fundamental to a diversity of elementary biological
 
 RNA folding prediction from primary sequence information alone remains challenging classically, viewed from both the standpoints of chemical dynamics and combinatorial optimization of free energy. Quantum approaches, with their demonstrable advantage in both of these realms, therefore lend themselves well to the RNA folding problem. To our knowledge, only one attempt has been made to map RNA folding to quantum computing, via quantum annealing [6]. With this project, we seek to: (1) modify the Hamiltonian presented therein to better reflect the underlying chemistry of base-pairing, and (2) optimize the free parameters of the Hamiltonian against a suite of RNAs with known structures. Expanding on (2), we aim to implement and test our Hamiltonian with the quantum annealing hardware of D-Wave, and demonstrate a parallel approach with gate-based hardware via QAOA, using the very same Hamiltonian.
 
-
 ## Project organization
 
-The first part of this project is located in the file: qrna_folding_annealing.ipynb, where we use D-wave's SDK, Ocean, to build the annealing solution for the RNA folding problem. For the gate-based implementation we created the file: qrna_folding_qaoa.ipynb where we use the QAOA implementation of Qiskit to find the optimal solution for the proposed Hamiltonian. Lastly we added a folder containing a dataset with multiple RNA from bpRNA sequences of different size (from 20 to 400 bases) and type (known to contain pseudoknots, pseudoknot-free). These are used as inputs for each implementation of our methodology.
+The annealing implemention of this project is located in the file: qrna_folding_annealing.ipynb, where we use D-wave's SDK, Ocean, to build the annealing solution for the RNA folding problem.
+
+The QAOA implementation of this project is located in the file: qrna_folding_qaoa.ipynb where we use the QAOA implementation of Qiskit to find the optimal solution for the proposed Hamiltonian. 
+
+The `data` folder contains a dataset with multiple RNA from [bpRNA](http://bprna.cgrb.oregonstate.edu/index.html) sequences of different size (from 20 to 400 bases) and type (known to contain pseudoknots, pseudoknot-free). These are used as inputs for each implementation of our methodology. 
+
+The `results` folder contains the raw results of out annealing implementation, including: structure bpRNA ID, known stems, known energy, predicted stems, predicted energy, and comparison metrics. "All" refers to small, medium, and large structures, compiled. "H" refers to the hydrogen-bond model. "N" refers to the normal model. "Hybrid" results were computed with the D-Wave hybrid solver; "Quantum" results were computed with the D-Wave QPU without hybridizing. Plots visualize our results.
+
+The linked [presentation](https://docs.google.com/presentation/d/1r9f51t5CkaSBdAiReTvXFvJ-J_PL5B8CKlnhDdwZ0fM/edit?usp=sharing) contains a walk-through of our methodology and results.
 
 ## References
 
