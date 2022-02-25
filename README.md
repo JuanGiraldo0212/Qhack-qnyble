@@ -14,13 +14,13 @@ RNA folding prediction from primary sequence information alone remains challengi
 
 ## Project organization
 
-The first part of this project is located in the file: rna_folding_annealing.ipynb, where we use D-wave's SDK, Ocean, to build the annealing solution for the RNA folding problem. For the gate-based implementation we created the file: rna_folding_gate-based.ipynb where we use Qiskit, more specifically their QAOA implementation to find the optimal solution for the proposed Hamiltonian. Lastly we added a folder containing a dataset with multiple RNA sequences of different size and type, these are going to be used as inputs for each implementation of our methodology.
+The first part of this project is located in the file: qrna_folding_annealing.ipynb, where we use D-wave's SDK, Ocean, to build the annealing solution for the RNA folding problem. For the gate-based implementation we created the file: qrna_folding_qaoa.ipynb where we use the QAOA implementation of Qiskit to find the optimal solution for the proposed Hamiltonian. Lastly we added a folder containing a dataset with multiple RNA from bpRNA sequences of different size (from 20 to 400 bases) and type (known to contain pseudoknots, pseudoknot-free). These are used as inputs for each implementation of our methodology.
 
 ## References
 
 [1] J. Li and C. Liu, “Coding or noncoding, the converging concepts of RNAs,” Frontiers in
 Genetics, vol. 10, May 2019.    
-[2] G.L.ConnandD.E.Draper,“RNAstructure,”Current Opinion in Structural Biology,vol.8,
+[2] G.L.Conn and D.E.Draper,“RNAstructure,”Current Opinion in Structural Biology,vol.8,
 no. 3, pp. 278–285, Jun. 1998.    
 [3] S. R. Holbrook, “RNA structure: the long and the short of it,” Current Opinion in Structural
 Biology, vol. 15, no. 3, pp. 302–308, Jun. 2005.     
